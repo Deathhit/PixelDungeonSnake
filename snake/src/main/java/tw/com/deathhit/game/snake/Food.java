@@ -15,10 +15,10 @@ public class Food implements MapObject {
 
         SnakeSegment last = model.getSegment(model.getSnakeSize()-1);
 
-        model.snakeMove(controller.getNextX(), controller.getNextY());
-
         model.snakeConcat(new SimpleSnakeSegment(), last.x, last.y);
 
+        model.snakeMove(controller.getNextX(), controller.getNextY());
+        
         Message message = Message.obtain();
 
         message.what = Constants.MESSAGE_EAT;

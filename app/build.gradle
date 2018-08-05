@@ -16,15 +16,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    implementation project(":core")
-    implementation project(":utility")
-    implementation project(":snake")
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':core')
+    implementation project(':utility')
+    implementation project(':snake')
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
